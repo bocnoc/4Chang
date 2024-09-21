@@ -7,9 +7,9 @@ using UnityEngine.UI;
 
 public class MainScene : MonoBehaviour
 {
-    public Button showLoveButton;
-    public Button hideLoveButton;
-    public RectTransform loveMessage;
+    private Button showLoveButton;
+    private Button hideLoveButton;
+    private RectTransform loveMessage;
 
     void Awake()
     {
