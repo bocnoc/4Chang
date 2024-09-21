@@ -1,0 +1,26 @@
+có các tính năng
+
+0. Main menu
+1. List Văn random
+2. Ành Đã chụp chung random
+3. Đếm ngày đã yêu
+4. Dịp đặc biệt
+5. Mini game
+
+
+0. Main menu
+
+em có yêu a không?  (không thể bấm không)
+-> a cũng thế
+
+e có nhớ anh không? (ko thể bấm không)
+-> a cũng thế
+
+1. List văn random
+-> 1 ngày 1 câu( nếu có thể thì giới hạn một ngày bấm 1 cái
+
+random câu văn ngày hôm nay
+
+2. Ảnh đã chụp chung
+-> random, tốn nhiều dung lượng
+
