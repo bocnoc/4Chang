@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UniRx;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SidePresenterView : MonoBehaviour
@@ -24,12 +25,16 @@ public class SidePresenterView : MonoBehaviour
     void Start()
     {
         menu1.OnClickAsObservable().Subscribe(_ => {
+            SceneManager.LoadScene("Mainscene");
         }).AddTo(this);
         menu2.OnClickAsObservable().Subscribe(_ => {
+            SceneManager.LoadScene("FlirtingScene");
         }).AddTo(this);
         menu3.OnClickAsObservable().Subscribe(_ => {
+            SceneManager.LoadScene("Mainscene");
         }).AddTo(this);
         menu4.OnClickAsObservable().Subscribe(_ => {
+            SceneManager.LoadScene("Mainscene");
         }).AddTo(this);
     }
 
