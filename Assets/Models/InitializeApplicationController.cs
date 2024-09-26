@@ -9,6 +9,8 @@ namespace AppSystemManager
         {
             var obj = new GameObject("InitAppComponent");
             obj.AddComponent<SingletonInstanceMaker>();
+            
+            
         }
     }
 }
