@@ -24,3 +24,5 @@ random câu văn ngày hôm nay
 2. Ảnh đã chụp chung
 -> random, tốn nhiều dung lượng
 
+3. Special event
+-> quay dc 1 lần, được quay lại(khi bấm e ko thiích cai đó)
