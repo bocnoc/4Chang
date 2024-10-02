@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Model;
+using UniRx;
 using UnityEngine;
 namespace Presenter
 {
@@ -9,6 +10,10 @@ namespace Presenter
         private void Awake()
         {
             UpdateUseQuote();
+        }
+
+        private void Start()
+        {
         }
         private void UpdateUseQuote()
         {
@@ -31,7 +36,7 @@ namespace Presenter
         public string GetTodayMessage(DateTime todayTime)
         {
             bool todayToken = gotMessageToday(todayTime);
-            if (false)
+            if (todayToken)
             {
                 return "Mỗi ngày một câu thôi e ơi";
             }
@@ -49,6 +54,8 @@ namespace Presenter
                 if (FlirtingDatabase.flirtingList[i] == todayMessage)
                 {
                     FlirtingSceneModel.Instance.usedQuote.Value.Add(todayMessage);
+                    PlayerPrefs.SetInt("Quote_" + i.ToString(), 1);
+                    PlayerPrefs.Save();
                 }
             }
         }
@@ -78,5 +85,6 @@ namespace Presenter
                 return true;
             }
         }
+        
     }
 }

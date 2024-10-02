@@ -304,7 +304,7 @@ GameObject:
   - component: {fileID: 204010116}
   - component: {fileID: 204010115}
   m_Layer: 0
-  m_Name: Text
+  m_Name: FlirtMessageText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -829,6 +829,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1148711043}
   - component: {fileID: 1148711045}
+  - component: {fileID: 1148711047}
+  - component: {fileID: 1148711046}
   m_Layer: 0
   m_Name: Pannel
   m_TagString: Untagged
@@ -883,6 +885,30 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &1148711046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148711042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59d1ed244e6a433bbeb365f00b40d1bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1148711047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148711042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35f154d01e8a424fa82dd588202f521e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1224817586
 GameObject:
   m_ObjectHideFlags: 0
@@ -1007,6 +1033,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2368578221929512790, guid: b5b73fc4967e17741942de69a6e03f61, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2368578221929512790, guid: b5b73fc4967e17741942de69a6e03f61, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -1035,6 +1065,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4862097219171478008, guid: b5b73fc4967e17741942de69a6e03f61, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4862097219171478008, guid: b5b73fc4967e17741942de69a6e03f61, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -1056,6 +1090,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4966967879311925531, guid: b5b73fc4967e17741942de69a6e03f61, type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966967879311925531, guid: b5b73fc4967e17741942de69a6e03f61, type: 3}
+      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4966967879311925531, guid: b5b73fc4967e17741942de69a6e03f61, type: 3}
@@ -1091,6 +1129,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6199309855914931597, guid: b5b73fc4967e17741942de69a6e03f61, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6199309855914931597, guid: b5b73fc4967e17741942de69a6e03f61, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -1112,6 +1154,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6238778426099092614, guid: b5b73fc4967e17741942de69a6e03f61, type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6238778426099092614, guid: b5b73fc4967e17741942de69a6e03f61, type: 3}
+      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6238778426099092614, guid: b5b73fc4967e17741942de69a6e03f61, type: 3}
@@ -1216,6 +1262,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8068807200031052040, guid: b5b73fc4967e17741942de69a6e03f61, type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068807200031052040, guid: b5b73fc4967e17741942de69a6e03f61, type: 3}
+      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8068807200031052040, guid: b5b73fc4967e17741942de69a6e03f61, type: 3}
