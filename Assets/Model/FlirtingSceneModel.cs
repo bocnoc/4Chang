@@ -8,7 +8,7 @@ using UnityEngine.Assertions;
 public class FlirtingSceneModel
 {
     private static FlirtingSceneModel _instance;
-    public ReactiveProperty<List<string>> usedQuote;
+    public ReactiveProperty<List<string>> usedQuote = new ReactiveProperty<List<string>>();
 
     public static FlirtingSceneModel Instance
     {

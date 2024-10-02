@@ -23,23 +23,45 @@ namespace Presenter
             FlirtingSceneModel.Instance.usedQuote.Value = tmpList;
         }
 
-
+/// <summary>
+/// return a random message if today didn't open yet
+/// </summary>
+/// <param name="todayTime"></param>
+/// <returns> todayMessage="random from list"</returns>
         public string GetTodayMessage(DateTime todayTime)
         {
             bool todayToken = gotMessageToday(todayTime);
-            if (todayToken)
+            if (false)
             {
-                return "Một ngày một câu thôi e ơi";
+                return "Mỗi ngày một câu thôi e ơi";
             }
             
             
             //var todayMessage = FlirtingDatabase.flirtingList[UnityEngine.Random.Range(0, FlirtingDatabase.flirtingList.Count)];
             var todayMessage = GetUnusedMessage();
+            saveUsedMessage(todayMessage);
             return todayMessage;
+        }
+        private void saveUsedMessage(string todayMessage)
+        {
+            for (int i = 0; i < FlirtingDatabase.flirtingList.Count; i++)
+            {
+                if (FlirtingDatabase.flirtingList[i] == todayMessage)
+                {
+                    FlirtingSceneModel.Instance.usedQuote.Value.Add(todayMessage);
+                }
+            }
         }
         private string GetUnusedMessage()
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < FlirtingDatabase.flirtingList.Count; i++)
+            {
+                if (!FlirtingSceneModel.Instance.usedQuote.Value.Contains(FlirtingDatabase.flirtingList[i]))
+                {
+                    return FlirtingDatabase.flirtingList[i];
+                }
+            }
+            return "Hết văn rồi em ơi";
         }
         
         private bool gotMessageToday(DateTime todayTime)

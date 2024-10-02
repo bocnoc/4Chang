@@ -11,6 +11,7 @@ public class SingletonInstanceMaker: MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         SideMenuModel.Instance = new SideMenuModel();
+        FlirtingSceneModel.Instance = new FlirtingSceneModel();
     }
     
 }
