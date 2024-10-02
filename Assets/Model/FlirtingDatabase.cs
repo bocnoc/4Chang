@@ -8,7 +8,6 @@ namespace Model
 	        "	Lúc hôn e cứ như uống thuốc vậy - phải đủ LIỀU",
 	        "Anh gặp e muốn chết, cần phải đi CT(city) mới được",
 	        "Gọi e là ớt, a tập gym cũng vì cảm thấy yeu ot",
-	        "Uống có hết bao nhiêu can bia can rượu, thì cũng can’t get you out of my head",
 	        "E đau họng vì bụi ở VN cũng bởi vì e có quá nhiều sức húttt",
 	        "Em cứ như dầu gội vậy, vì bên em, e làm anh mất “chí” ",
 	        "Lúc nào a cũng thích văn vở, đơn giản thôi vì e đẹp như thơ",
@@ -17,7 +16,7 @@ namespace Model
 	        "Chắc e muốn ăn, vì a “đủ chất” và “ngon zai”",
 	        "Lâu lâu a cứ tưởng tình y mình là lọ 梅 a ngâm, cứ như là mơ vậy",
 	        "Với e lúc nào a cũng muốn dc có con, đó là connection",
-	        "E thích mì, dịch là gì? You love mi!",
+	        "E thích mỳ gạo, dịch là gì? I love \"My 稲\"!",
 	        "Dạo này a bớt tra google rồi, vì ở e có tất cả những gì a tìm kiếm",
 	        "Có e xong a tự tin hơn cả Lê Lợi, vì ko cần kiếm nữa",
 	        "E giống như đồ án tốt nghiệp vậy, là thứ a cần bảo vệ ",
@@ -32,6 +31,7 @@ namespace Model
 	    public static List<string> flirtingListOld = new List<string>()
 	    {
 		    "Khi ở bên e a cứ như nha sĩ chưa tốt nghiệp…vì chẳng biết mần răng",
+		    "Uống có hết bao nhiêu can bia can rượu, thì cũng can’t get you out of my head",
 		    "Tư nhiên thèm cá kho tương… chạy đi mua đồ thì nhớ ra mình còn hẳn 1 tấn tương tư",
 		    "A khong co em gai, ma sao lai thuong thay nho em",
 		    "Nhiệt độ tan chảy của tim a là nụ cười của e",
