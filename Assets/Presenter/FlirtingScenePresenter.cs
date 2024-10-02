@@ -9,13 +9,13 @@ namespace Presenter
     {
         private void Awake()
         {
-            UpdateUseQuote();
+            UpdateUsedQuote();
         }
 
         private void Start()
         {
         }
-        private void UpdateUseQuote()
+        private void UpdateUsedQuote()
         {
             List<string> tmpList = new List<string>();
             for (int i = 0; i < FlirtingDatabase.flirtingList.Count; i++)

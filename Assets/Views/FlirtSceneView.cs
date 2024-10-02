@@ -20,6 +20,7 @@ namespace Views
         private FlirtingScenePresenter flirtingScenePresenter; 
         private void Awake()
         {
+            PlayerPrefs.DeleteAll();
             flirtingScenePresenter = GetComponentInChildren<FlirtingScenePresenter>();
             
             randomButton = gameObject.GetComponentsInChildren<Button>(true).First(name => name.name.Contains("Random"));
@@ -33,7 +34,7 @@ namespace Views
         {
             randomButton.onClick.AsObservable().Subscribe(_ =>
             {
-                var todayTime = DateTime.Now;
+                var todayTime = DateTime.Today;
                 var todayMessage = flirtingScenePresenter.GetTodayMessage(todayTime);
                 ShowMessageOfTheDay(todayMessage);
             }).AddTo(this);
