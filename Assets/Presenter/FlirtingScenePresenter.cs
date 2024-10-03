@@ -1,19 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Model;
 using UniRx;
 using UnityEngine;
+using Views;
 namespace Presenter
 {
     public class FlirtingScenePresenter : MonoBehaviour
     {
+        private FlirtSceneView flirtingSceneView;
+        
         private void Awake()
         {
-            UpdateUsedQuote();
+            flirtingSceneView = GetComponentInChildren<FlirtSceneView>();
         }
 
         private void Start()
         {
+            UpdateUsedQuote();
+            InitializeNewQuoteList();
+            InitializeOldQuoteList();
         }
         private void UpdateUsedQuote()
         {
@@ -36,7 +43,7 @@ namespace Presenter
         public string GetTodayMessage(DateTime todayTime)
         {
             bool todayToken = gotMessageToday(todayTime);
-            if (todayToken)
+            if (false)
             {
                 return "Mỗi ngày một câu thôi e ơi";
             }
@@ -44,8 +51,9 @@ namespace Presenter
             
             //var todayMessage = FlirtingDatabase.flirtingList[UnityEngine.Random.Range(0, FlirtingDatabase.flirtingList.Count)];
             var todayMessage = GetUnusedMessage();
-            saveUsedMessage(todayMessage);
-            return todayMessage;
+            saveUsedMessage(todayMessage.Item1);
+            addCurrentlyQuote(todayMessage.Item1, todayMessage.Item2);
+            return todayMessage.Item1;
         }
         private void saveUsedMessage(string todayMessage)
         {
@@ -59,16 +67,25 @@ namespace Presenter
                 }
             }
         }
-        private string GetUnusedMessage()
+        private (string, int) GetUnusedMessage()
         {
             for (int i = 0; i < FlirtingDatabase.flirtingList.Count; i++)
             {
                 if (!FlirtingSceneModel.Instance.usedQuote.Value.Contains(FlirtingDatabase.flirtingList[i]))
                 {
-                    return FlirtingDatabase.flirtingList[i];
+                    return (FlirtingDatabase.flirtingList[i], i);
                 }
             }
-            return "Hết văn rồi em ơi";
+            return ("Hết văn rồi em ơi", 0);
+        }
+        
+        private void addCurrentlyQuote(string todayMessage, int messageIndex)
+        {
+            if (todayMessage == "Hết văn rồi em ơi")
+            {
+                return;
+            }
+            flirtingSceneView.AddNewQuoteButton(todayMessage, "Quote_" + messageIndex.ToString());
         }
         
         private bool gotMessageToday(DateTime todayTime)
@@ -86,5 +103,20 @@ namespace Presenter
             }
         }
         
+        private void InitializeNewQuoteList()
+        {
+            foreach (var (quote, i) in FlirtingSceneModel.Instance.usedQuote.Value.Select((quotes, index) => (quotes, index)))
+            {
+                flirtingSceneView.AddNewQuoteButton(quote, "Quote_" + i.ToString());
+            }
+        }
+
+        private void InitializeOldQuoteList()
+        {
+            foreach (var (quote, i) in FlirtingDatabase.flirtingListOld.Select((quotes, index) => (quotes, index)))
+            {
+                flirtingSceneView.AddOldQuoteButton(quote, "Quote_" + i.ToString());
+            }
+        }
     }
 }
