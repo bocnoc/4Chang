@@ -12,6 +12,7 @@ namespace Views
     {
         private Button randomButton;
         private Button closeButton;
+        private Button openDialogButton;
 
         private TextMeshProUGUI messageText;
         private RectTransform doneNotice;
@@ -32,6 +33,7 @@ namespace Views
             
             randomButton = gameObject.GetComponentsInChildren<Button>(true).First(name => name.name.Contains("Random"));
             closeButton = gameObject.GetComponentsInChildren<Button>(true).First(name => name.name.Contains("Close"));
+            openDialogButton = gameObject.GetComponentsInChildren<Button>(true).First(name => name.name.Contains("OpenDialog"));
             messageText = gameObject.GetComponentsInChildren<TextMeshProUGUI>(true).First(name => name.name.Contains("FlirtMessageText"));
             doneNotice = gameObject.GetComponentsInChildren<RectTransform>(true).First(name => name.name.Contains("WrongAnswer"));
             subMessage = gameObject.GetComponentsInChildren<RectTransform>(true).First(name => name.name.Contains("RightAnswer"));
@@ -50,6 +52,11 @@ namespace Views
             closeButton.onClick.AsObservable().Subscribe(_ =>
             {
                 getQuoteOverlay.gameObject.SetActive(false);
+            }).AddTo(this);
+
+            openDialogButton.onClick.AsObservable().Subscribe(_ =>
+            {
+                getQuoteOverlay.gameObject.SetActive(true);
             }).AddTo(this);
         }
         private void ShowMessageOfTheDay(string message)

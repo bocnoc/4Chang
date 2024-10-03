@@ -43,7 +43,7 @@ namespace Presenter
         public string GetTodayMessage(DateTime todayTime)
         {
             bool todayToken = gotMessageToday(todayTime);
-            if (false)
+            if (todayToken)
             {
                 return "Mỗi ngày một câu thôi e ơi";
             }

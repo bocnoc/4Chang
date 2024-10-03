@@ -41,7 +41,7 @@ public class SideMenuView : MonoBehaviour
                 SceneManager.LoadScene("FlirtingScene");
                 break;
             case 2:                
-                SceneManager.LoadScene("Mainscene");
+                SceneManager.LoadScene("CountingScene");
                 break;
             case 3:
                 SceneManager.LoadScene("Mainscene");
