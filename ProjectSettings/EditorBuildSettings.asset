@@ -11,5 +11,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FlirtingScene.unity
     guid: a341a8623bf9a41478fe3171d7f6c409
+  - enabled: 1
+    path: Assets/Scenes/CountingScene.unity
+    guid: 648d55ed311593f4c8cb010d5f2d3bb1
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

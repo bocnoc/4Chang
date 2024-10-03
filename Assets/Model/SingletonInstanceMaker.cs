@@ -12,6 +12,7 @@ public class SingletonInstanceMaker: MonoBehaviour
 
         SideMenuModel.Instance = new SideMenuModel();
         FlirtingSceneModel.Instance = new FlirtingSceneModel();
+        CountingSceneModel.Instance = new CountingSceneModel();
     }
     
 }
