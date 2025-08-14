@@ -21,6 +21,26 @@ public class CountingSceneView : MonoBehaviour
 
     internal void ChangeDateingTime(TimeSpan dateTime)
     {
-        time.text = dateTime.Days.ToString() +" days \n"+ dateTime.Hours.ToString() +" hours \n"+ dateTime.Minutes.ToString() +" minutes \n"+ dateTime.Seconds.ToString()+" seconds";
+        int totalDays = dateTime.Days;
+        int years = totalDays / 365;
+        int remainingDays = totalDays % 365;
+
+        string timeText = "";
+
+        if (years > 0)
+        {
+            timeText += years.ToString() + " years \n";
+        }
+
+        if (remainingDays > 0 || years == 0)
+        {
+            timeText += remainingDays.ToString() + " days \n";
+        }
+
+        timeText += dateTime.Hours.ToString() + " hours \n";
+        timeText += dateTime.Minutes.ToString() + " minutes \n";
+        timeText += dateTime.Seconds.ToString() + " seconds";
+
+        time.text = timeText;
     }
 }
