@@ -19,12 +19,34 @@ public class SideMenuPresenter : MonoBehaviour
         SideMenuModel.Instance.CurrentSelectTab.SkipLatestValueOnSubscribe().Subscribe(tabIndex =>
         {
             sideMenuView.ChangeTab(tabIndex);
+            HandleSceneTransition(tabIndex);
         }).AddTo(this);
 
         sideMenuView.onClickSideMenuAsObservable().Subscribe(tabIndex =>
         {
             SideMenuModel.Instance.CurrentSelectTab.Value = tabIndex;
         }).AddTo(this);
+    }
+
+    private void HandleSceneTransition(int tabIndex)
+    {
+        switch (tabIndex)
+        {
+            case 0:
+                PlatformSceneManager.LoadMainScene();
+                break;
+            case 1:
+                PlatformSceneManager.LoadFlirtingScene();
+                break;
+            case 2:
+                PlatformSceneManager.LoadCountingScene();
+                break;
+            case 3:
+                PlatformSceneManager.LoadMainScene();
+                break;
+            default:
+                break;
+        }
     }
 
     // Update is called once per frame

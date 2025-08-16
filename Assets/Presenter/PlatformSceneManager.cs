@@ -25,6 +25,7 @@ public static class PlatformSceneManager
         LoadScene(sceneName);
     }
 
+    // ReSharper disable Unity.PerformanceAnalysis
     public static void LoadCountingScene()
     {
         Platform platform = GetCurrentPlatform();
